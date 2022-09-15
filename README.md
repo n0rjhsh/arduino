@@ -1,4 +1,4 @@
-The code sources in this repository are strictly for all projects in Workshop Series: Arduino organized by Petrosains PlaySmart Kota Kinabalu.
+The code sources in this repository are strictly for projects in the Workshop Series: Arduino modules by Petrosains PlaySmart Kota Kinabalu.
 More Info: https://petrosains.com.my/
 <ol><li>
 Follow us on <a
