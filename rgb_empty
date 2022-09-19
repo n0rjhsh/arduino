@@ -1,0 +1,31 @@
+int _ = _;
+int _ = _;
+int _ = _;
+
+void setup()
+{
+  _(_, _);
+  pinMode(_, OUTPUT);
+  pinMode(_, OUTPUT);
+}
+
+void loop()
+{
+  //First colour
+  _(_, _);
+  _(_, _);
+  analogWrite(_, _);
+  delay(_);
+  
+  //Second colour
+  _(_, _);
+  _(_, _);
+  analogWrite(_, _);
+  delay(_);
+  
+  //Third colour
+  _(_, _);
+  _(_, _);
+  analogWrite(_, _);
+  delay(_);
+}
