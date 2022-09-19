@@ -1,0 +1,41 @@
+int _ = _;
+int _ = _;
+int _ = _;
+
+void setup()
+{
+  _(_, _);
+  _(_, _);
+  pinMode(_, OUTPUT);
+}
+
+void loop()
+{
+  //First LED
+  _(_, HIGH);
+  _(_);
+  _(_, LOW);
+  _(_);
+  
+  //Second LED
+  _(_, HIGH);
+  _(_);
+  _(_, LOW);
+  _(_);
+  
+  //Third LED
+  _(_, HIGH);
+  _(_);
+  _(_, LOW);
+  _(_);
+  
+  //All LEDs turn on and off simultaneously
+  _(_, _);
+  _(_, _);
+  digitalWrite(_, HIGH);
+  delay(_);
+  _(_, _);
+  _(_, _);
+  digitalWrite(_, LOW);
+  delay(_);
+}
