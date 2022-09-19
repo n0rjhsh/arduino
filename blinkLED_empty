@@ -1,14 +1,14 @@
-int _ = _;
+int _=_;
 
 void setup()
 {
-  _(_, OUTPUT);
-}
+  _(_, OUTPUT)_
+_
 
 void loop()
-{
-  _(_, HIGH);
-  _(_);
+_
+  _(_, HIGH)_
+  _(_)_
   digitalWrite(_, LOW);
   delay(_);
-}
+_
