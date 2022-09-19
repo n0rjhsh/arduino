@@ -1,0 +1,26 @@
+const int _ = _;
+const int _ = _;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(_, OUTPUT);
+  pinMode(_, INPUT);
+}
+
+void loop()
+{
+  int _ = analogRead(_);
+  if (_ <= _)
+  {
+    digitalWrite(_, _);
+    Serial.print("_");
+    Serial.println(_);
+  }
+  else
+  {
+    digitalWrite(_, _);
+    Serial.print("_");
+    Serial.println(_);
+  }
+}
