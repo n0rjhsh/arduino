@@ -1,0 +1,52 @@
+#include <Servo.h>
+#define _ _
+#define _ _
+#define _ _
+
+float _, _;
+
+//Create a servo object
+Servo _;
+
+void setup()
+{
+  Serial.begin (9600);
+  pinMode(_, OUTPUT);
+  pinMode(_, INPUT);
+  _.attach(_);
+}
+
+void loop()
+{
+  //Clears the 'trigPin' condition
+  digitalWrite(_, LOW);
+  delayMicroseconds(2);
+
+  //Sets the 'trigPin' HIGH (ACTIVE) for 10 microseconds
+  digitalWrite(_, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(_, LOW);
+
+  //Reads the 'echoPin', returns the sound wave travel time in microseconds
+  _ = pulseIn(_, HIGH);
+
+  //Calculating the 'distance'
+  // Use 343 metres per second as speed of sound
+  _ = (_ * .0343) / 2;
+
+  //Display the 'distance' in cm on the serial monitor
+  Serial._(_);
+  Serial._("_");
+  delay(_);
+
+  //Servo moves to 90 degrees if obstacle is detected and goes to 0 degree is no obstacle is detected
+  if (_ < _)
+  {
+    _.write(90);
+  }
+
+  else
+  {
+    _.write(0);
+  }
+}
