@@ -1,0 +1,36 @@
+#include <SimpleDHT.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+#define _ _
+
+SimpleDHT11 dht11(_);
+byte temperature = 0;
+byte humidity = 0;
+
+void setup()
+{
+  pinMode(_, INPUT);
+  lcd.init();
+  lcd.clear();
+  lcd.backlight();
+}
+
+void loop()
+{
+  dht11.read(&temperature, &humidity, NULL);
+  int _ = temperature;
+  int _ = humidity;
+
+  lcd.setCursor(_, _); //First word, First line
+  lcd.print("_");
+  lcd.setCursor(7, 0); //Second word, First line
+  lcd.print(_);
+  lcd.setCursor(9, 0); //Third word, First line
+  lcd.print("_");
+  lcd.setCursor(_, _); //First word, Second line
+  lcd.print("_");
+  lcd.setCursor(7, 1); //Second word, Second line
+  lcd.print(_);
+  lcd.setCursor(9, 1); //Third word, Second line
+  lcd.print("_");
+}
