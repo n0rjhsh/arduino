@@ -1,0 +1,35 @@
+#define _ _
+#define _ _
+
+float _, _;
+
+void setup()
+{
+  Serial.begin (9600);
+  _(_, INPUT);
+  pinMode(_, _);
+}
+
+void loop()
+{
+  //Clears the 'trigPin' condition
+  digitalWrite(_, LOW);
+  delayMicroseconds(2);
+  
+  //Sets the 'trigPin' HIGH (ACTIVE) for 10 microseconds
+  digitalWrite(_, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(_, LOW);
+  
+  //Reads the 'echoPin', returns the sound wave travel time in microseconds
+  _ = pulseIn(_, HIGH);
+  
+  //Calculating the 'distance'
+  // Use 343 metres per second as speed of sound
+  _ = (_*.0343)/2;
+  
+  //Display the 'distance' in cm on the serial monitor
+  Serial.print(_);
+  Serial.println(" cm");
+  delay(_);
+}
