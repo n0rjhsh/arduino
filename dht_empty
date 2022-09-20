@@ -1,0 +1,25 @@
+#include <SimpleDHT.h>
+#define _ _
+
+SimpleDHT11 dht11(_);
+byte temperature = 0;
+byte humidity = 0;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(_, INPUT);
+}
+
+void loop()
+{
+  dht11.read(&temperature, &humidity, NULL);
+  int _ = _;
+  int _ = _;
+
+  Serial.print(_);
+  Serial.print("_");
+  Serial.print(_);
+  Serial.println("_");
+  delay(_);
+}
