@@ -1,0 +1,29 @@
+//Include the Servo library
+#include <Servo.h>
+
+//Define the servo pin
+#define _ _
+
+//Create a servo object
+Servo _;
+
+void setup()
+{
+  //Attach the servo to the pin number
+  _._(_);
+}
+
+void loop()
+{
+  //Make servo go to 0 degrees
+  _._(_);
+  delay(_);
+
+  //Make servo go to 90 degrees
+  _.write(_);
+  delay(_);
+
+  //Make servo go to 180 degrees
+  _.write(_);
+  delay(_);
+}
