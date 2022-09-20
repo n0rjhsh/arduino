@@ -1,0 +1,24 @@
+#include <LiquidCrystal_I2C.h>
+
+//I2C address 0x27, 16 column and 2 rows
+LiquidCrystal_I2C lcd(0x27, _, _); 
+
+void setup()
+{
+  //initialize the lcd
+  lcd._(); 
+  lcd._();
+
+  //move cursor to   (0, 0)
+  lcd._(_, _);
+  //print message at (0, 0)
+  lcd._("_");
+  //move cursor to   (0, 1)
+  lcd.setCursor(_, _);
+  //print message at (0, 1)
+  lcd.print("_"); 
+}
+
+void loop()
+{
+}
