@@ -1,0 +1,36 @@
+#define BLYNK_PRINT Serial
+
+#define BLYNK_TEMPLATE_ID "_"
+#define BLYNK_DEVICE_NAME "_"
+#define BLYNK_AUTH_TOKEN "_"
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+#include <SimpleDHT.h>
+
+#define _ _
+SimpleDHT11 dht11(_);
+byte temperature = 0;
+byte humidity = 0;
+
+char auth[] = "_";
+char ssid[] = "_";
+char pass[] = "_";
+
+void setup()
+{
+  Serial.begin(9600);
+  Blynk.begin(auth, ssid, pass);
+  pinMode(_, INPUT);
+}
+
+void loop()
+{
+  Blynk.run();
+  dht11.read(&temperature, &humidity, NULL);
+  int _ = _;
+  int _ = _;
+  Blynk.virtualWrite(_, _);
+  Blynk.virtualWrite(_, _);
+  delay(_);
+}
