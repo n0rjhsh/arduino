@@ -12,7 +12,7 @@ SimpleDHT11 dht11(_);
 byte temperature = 0;
 byte humidity = 0;
 
-char auth[] = _;
+char auth[] = BLYNK_AUTH_TOKEN;
 char ssid[] = "_";
 char pass[] = "_";
 
