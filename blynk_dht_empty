@@ -1,5 +1,4 @@
 #define BLYNK_PRINT Serial
-
 #define BLYNK_TEMPLATE_ID "_"
 #define BLYNK_DEVICE_NAME "_"
 #define BLYNK_AUTH_TOKEN "_"
