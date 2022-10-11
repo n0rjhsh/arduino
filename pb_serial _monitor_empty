@@ -1,0 +1,14 @@
+int _ = _;
+
+void setup()
+{
+  Serial.begin(9600);
+  _(_, INPUT);
+}
+
+void loop()
+{
+  int _ = _(_);
+  Serial.print("_");
+  Serial.println(_);
+}
