@@ -74,7 +74,7 @@ void loop()
   Serial.print("Distance: ");
   Serial.println(_);
 
-  if ( _ < _ )
+  if ( _ > _ && _ < _ )
   {
     stop();
     delay(_);
