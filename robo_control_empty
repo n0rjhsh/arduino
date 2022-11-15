@@ -63,7 +63,7 @@ void loop()
   delay(_);
   stop();
   delay(_);
-  _(_, _); //forward
+  _(_, _); //backward
   delay(_);
   _(_, _); //turn left
   delay(_);
