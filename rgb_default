@@ -1,0 +1,31 @@
+int redPin = 5;
+int greenPin = 6;
+int bluePin = 9;
+
+void setup()
+{
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+}
+
+void loop()
+{
+  //First colour
+  analogWrite(redPin, 0);
+  analogWrite(greenPin, 200);
+  analogWrite(bluePin, 200);
+  delay(1000);
+  
+  //Second colour
+  analogWrite(redPin, 200);
+  analogWrite(greenPin, 150);
+  analogWrite(bluePin, 130);
+  delay(1000);
+  
+  //Third colour
+  analogWrite(redPin, 50);
+  analogWrite(greenPin, 0);
+  analogWrite(bluePin, 150);
+  delay(1000);
+}
