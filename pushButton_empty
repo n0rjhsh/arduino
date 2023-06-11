@@ -5,11 +5,14 @@ void setup()
 {
   _(_, INPUT);
   _(_, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop()
 {
   int _ = _(_);
+  Serial.print("_");
+  Serial.println(_);
   if (_ == 1)
   {
     _(_, HIGH);
