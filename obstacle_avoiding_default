@@ -10,7 +10,7 @@ int trigPin = 7;
 long duration;
 int distance;
 
-void setup() 
+void setup()
 {
   pinMode(dirR, OUTPUT);
   pinMode(speedR, OUTPUT);
@@ -53,7 +53,7 @@ void left(int a, int b) //a=right motor, b=left motor
   analogWrite(speedL, b);
 }
 
-void stop() 
+void stop()
 {
   analogWrite(speedR, 0);
   analogWrite(speedL, 0);
