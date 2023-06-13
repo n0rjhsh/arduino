@@ -1,73 +1,73 @@
-int _ = _;
-int _ = _;
-int _ = _;
-int _ = _;
-int _ = _;
+int dirR = 12;
+int speedR = 10;
+int dirL = 13;
+int speedL = 11;
+int pb = 7;
 
 void setup() 
 {
-  _(_, _);
-  _(_, _);
-  pinMode(_, OUTPUT);
-  pinMode(_, OUTPUT);
-  pinMode(_, INPUT);
+  pinMode(dirR, OUTPUT);
+  pinMode(speedR, OUTPUT);
+  pinMode(dirL, OUTPUT);
+  pinMode(speedL, OUTPUT);
+  pinMode(pb, INPUT);
 
-  while (_(_) == 0)
+  while (digitalRead(pb) == 0)
   {
     stop();
   }
 }
 
-void _(int a, int b) //a=right motor, b=left motor
+void forward(int a, int b) //a=right motor, b=left motor
 {
-  _(_, _);
-  _(_, a);
-  digitalWrite(_, _);
-  analogWrite(_, b);
+  digitalWrite(dirR, HIGH);
+  analogWrite(speedR, a);
+  digitalWrite(dirL, HIGH);
+  analogWrite(speedL, b);
 }
 
-void _(int a, int b) //a=right motor, b=left motor
+void backward(int a, int b) //a=right motor, b=left motor
 {
-  _(_, _);
-  _(_, a);
-  digitalWrite(_, _);
-  analogWrite(_, b);
+  digitalWrite(dirR, LOW);
+  analogWrite(speedR, a);
+  digitalWrite(dirL, LOW);
+  analogWrite(speedL, b);
 }
 
-void _(int a, int b) //a=right motor, b=left motor
+void right(int a, int b) //a=right motor, b=left motor
 {
-  _(_, _);
-  _(_, a);
-  digitalWrite(_, _);
-  analogWrite(_, b);
+  digitalWrite(dirR, LOW);
+  analogWrite(speedR, a);
+  digitalWrite(dirL, HIGH);
+  analogWrite(speedL, b);
 }
 
-void _(int a, int b) //a=right motor, b=left motor
+void left(int a, int b) //a=right motor, b=left motor
 {
-  _(_, _);
-  _(_, a);
-  digitalWrite(_, _);
-  analogWrite(_, b);
+  digitalWrite(dirR, HIGH);
+  analogWrite(speedR, a);
+  digitalWrite(dirL, LOW);
+  analogWrite(speedL, b);
 }
 
 void stop() 
 {
-  _(_, _);
-  analogWrite(_, 0);
+  analogWrite(speedR, 0);
+  analogWrite(speedL, 0);
 }
 
 void loop() 
 {
-  _(_, _); //forward
-  delay(_);
-  _(_, _); //turn right
-  delay(_);
+  forward(100, 100); //forward
+  delay(1000);
+  right(100, 100); //turn right
+  delay(1000);
   stop();
-  delay(_);
-  _(_, _); //backward
-  delay(_);
-  _(_, _); //turn left
-  delay(_);
+  delay(1000);
+  backward(100, 100); //backward
+  delay(1000);
+  left(100, 100); //turn left
+  delay(1000);
   stop();
-  delay(_);
+  delay(1000);
 }
