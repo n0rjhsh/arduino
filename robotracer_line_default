@@ -14,10 +14,11 @@ int sensor5 = 19; // A5
 
 void setup()
 {
-  pinMode(speedR, OUTPUT);
   pinMode(dirR, OUTPUT);
-  pinMode(speedL, OUTPUT);
+  pinMode(speedR, OUTPUT);
   pinMode(dirL, OUTPUT);
+  pinMode(speedL, OUTPUT);
+  pinMode(pb, INPUT);
 
   pinMode(sensor1, INPUT);
   pinMode(sensor2, INPUT);
