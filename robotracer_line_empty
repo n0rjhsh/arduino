@@ -1,15 +1,16 @@
+//motor shield pin
 int _ = _;
 int _ = _;
 int _ = _;
 int _ = _;
 int _ = _;
 
+//line sensor pin
 int _ = _;
 int _ = _;
 int _ = _;
 int _ = _;
 int _ = _;
-
 
 void setup() 
 {
@@ -77,68 +78,68 @@ void loop()
   int _ = digitalRead(_);
   int _ = digitalRead(_);
 
-  if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == LOW && s5 == LOW) 
-  { //12*45
+  if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == LOW && s5 == LOW) //12*45 - Situation #1
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == HIGH && s5 == LOW) 
-  { //12**5
+  if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == HIGH && s5 == LOW) //12**5 - Situation #2
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == LOW && s5 == LOW) 
-  { //1**45
+  if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == LOW && s5 == LOW) //1**45 - Situation #3
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == LOW) 
-  { //1***5
+    if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == LOW) //123*5 - Situation #4
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == LOW) 
-  { //123*5
+  if (s1 == LOW && s2 == HIGH && s3 == LOW && s4 == LOW && s5 == LOW) //1*345 - Situation #5
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == HIGH && s3 == LOW && s4 == LOW && s5 == LOW) 
-  { //1*345
+  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == HIGH) //123** - Situation #6
+  { 
     forward(_, _);
   }
-  if (s1 == HIGH && s2 == HIGH && s3 == LOW && s4 == LOW && s5 == LOW) 
-  { //**345
+  if (s1 == HIGH && s2 == HIGH && s3 == LOW && s4 == LOW && s5 == LOW) //**345 - Situation #7
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == HIGH) 
-  { //123**
+  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == LOW && s5 == HIGH) //1234* - Situation #8
+  { 
     forward(_, _);
   }
-  if (s1 == HIGH && s2 == LOW && s3 == LOW && s4 == LOW && s5 == LOW) 
-  { //*2345
+  if (s1 == HIGH && s2 == LOW && s3 == LOW && s4 == LOW && s5 == LOW) //*2345 - Situation #9
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == LOW && s5 == HIGH) 
-  { //1234*
+  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == LOW && s5 == LOW) //12345 - Situation #10
+  { 
+    right(_, _);
+  }
+  if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == LOW) //1***5 - Situation #11
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == LOW && s5 == LOW) 
-  { //12345
-    left(_, _);
+  if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == LOW && s5 == LOW) //***45 - Situation #12
+  { 
+    forward(120, 100);
   }
-  if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == LOW && s5 == LOW) 
-  { //***45
+  if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == HIGH && s5 == HIGH) //12*** - Situation #13
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == HIGH && s5 == HIGH) 
-  { //12***
+  if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == HIGH) //1**** - Situation #14
+  { 
     forward(_, _);
   }
-  if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == HIGH) 
-  { //1****
+  if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == LOW) //****5 - Situation #15
+  { 
     forward(_, _);
   }
-  if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == LOW) 
-  { //****5
-    forward(_, _);
-  }
-  if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == HIGH) 
-  { //*****
-    left(_, _);
+  if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == HIGH) //***** - Situation #16
+  { 
+    stop();
   }
 }
