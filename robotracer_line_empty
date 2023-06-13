@@ -1,9 +1,9 @@
 //motor shield pin
-int _ = _;
-int _ = _;
-int _ = _;
-int _ = _;
-int _ = _;
+int dirR = 12;
+int speedR = 10;
+int dirL = 13;
+int speedL = 11;
+int pb = 7; //push button
 
 //line sensor pin
 int _ = _;
@@ -14,11 +14,11 @@ int _ = _;
 
 void setup() 
 {
-  _(_, _);
-  _(_, _);
-  pinMode(_, OUTPUT);
-  pinMode(_, OUTPUT);
-  pinMode(_, INPUT);
+  pinMode(dirR, OUTPUT);
+  pinMode(speedR, OUTPUT);
+  pinMode(dirL, OUTPUT);
+  pinMode(speedL, OUTPUT);
+  pinMode(pb, INPUT);
 
   pinMode(_, INPUT);
   pinMode(_, INPUT);
@@ -32,42 +32,42 @@ void setup()
   }
 }
 
-void _(int a, int b) //a=right motor, b=left motor
+void forward(int a, int b) //a=right motor, b=left motor
 {
-  _(_, _);
-  _(_, a);
-  digitalWrite(_, _);
-  analogWrite(_, b);
+  digitalWrite(dirR, HIGH);
+  analogWrite(speedR, a);
+  digitalWrite(dirL, HIGH);
+  analogWrite(speedL, b);
 }
 
-void _(int a, int b) //a=right motor, b=left motor
+void backward(int a, int b) //a=right motor, b=left motor
 {
-  _(_, _);
-  _(_, a);
-  digitalWrite(_, _);
-  analogWrite(_, b);
+  digitalWrite(dirR, LOW);
+  analogWrite(speedR, a);
+  digitalWrite(dirL, LOW);
+  analogWrite(speedL, b);
 }
 
-void _(int a, int b) //a=right motor, b=left motor
+void right(int a, int b) //a=right motor, b=left motor
 {
-  _(_, _);
-  _(_, a);
-  digitalWrite(_, _);
-  analogWrite(_, b);
+  digitalWrite(dirR, LOW);
+  analogWrite(speedR, a);
+  digitalWrite(dirL, HIGH);
+  analogWrite(speedL, b);
 }
 
-void _(int a, int b) //a=right motor, b=left motor
+void left(int a, int b) //a=right motor, b=left motor
 {
-  _(_, _);
-  _(_, a);
-  digitalWrite(_, _);
-  analogWrite(_, b);
+  digitalWrite(dirR, HIGH);
+  analogWrite(speedR, a);
+  digitalWrite(dirL, LOW);
+  analogWrite(speedL, b);
 }
 
 void stop() 
 {
-  _(_, _);
-  analogWrite(_, 0);
+  analogWrite(speedR, 0);
+  analogWrite(speedL, 0);
 }
 
 void loop() 
@@ -90,7 +90,7 @@ void loop()
   { 
     forward(_, _);
   }
-    if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == LOW) //123*5 - Situation #4
+  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == LOW) //123*5 - Situation #4
   { 
     forward(_, _);
   }
