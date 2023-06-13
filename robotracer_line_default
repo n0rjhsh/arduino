@@ -64,7 +64,7 @@ void left(int a, int b) //a=right motor, b=left motor
   analogWrite(speedL, b);
 }
 
-void stop() 
+void stop()
 {
   analogWrite(speedR, 0);
   analogWrite(speedL, 0);
@@ -79,67 +79,67 @@ void loop()
   int s5 = digitalRead(sensor5);
 
   if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == LOW && s5 == LOW) //12*45 - Situation #1
-  { 
+  {
     forward(100, 100);
   }
   if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == HIGH && s5 == LOW) //12**5 - Situation #2
-  { 
+  {
     forward(85, 100);
   }
   if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == LOW && s5 == LOW) //1**45 - Situation #3
-  { 
+  {
     forward(100, 85);
   }
-    if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == LOW) //123*5 - Situation #4
-  { 
+  if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == LOW) //123*5 - Situation #4
+  {
     forward(70, 100);
   }
   if (s1 == LOW && s2 == HIGH && s3 == LOW && s4 == LOW && s5 == LOW) //1*345 - Situation #5
-  { 
+  {
     forward(100, 70);
   }
   if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == HIGH && s5 == HIGH) //123** - Situation #6
-  { 
+  {
     forward(50, 100);
   }
   if (s1 == HIGH && s2 == HIGH && s3 == LOW && s4 == LOW && s5 == LOW) //**345 - Situation #7
-  { 
+  {
     forward(100, 50);
   }
   if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == LOW && s5 == HIGH) //1234* - Situation #8
-  { 
+  {
     forward(30, 100);
   }
   if (s1 == HIGH && s2 == LOW && s3 == LOW && s4 == LOW && s5 == LOW) //*2345 - Situation #9
-  { 
+  {
     forward(100, 30);
   }
   if (s1 == LOW && s2 == LOW && s3 == LOW && s4 == LOW && s5 == LOW) //12345 - Situation #10
-  { 
+  {
     right(80, 80);
   }
   if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == LOW) //1***5 - Situation #11
-  { 
+  {
     forward(100, 100);
   }
   if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == LOW && s5 == LOW) //***45 - Situation #12
-  { 
+  {
     forward(120, 100);
   }
   if (s1 == LOW && s2 == LOW && s3 == HIGH && s4 == HIGH && s5 == HIGH) //12*** - Situation #13
-  { 
+  {
     forward(100, 120);
   }
   if (s1 == LOW && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == HIGH) //1**** - Situation #14
-  { 
+  {
     forward(60, 120);
   }
   if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == LOW) //****5 - Situation #15
-  { 
+  {
     forward(100, 85);
   }
   if (s1 == HIGH && s2 == HIGH && s3 == HIGH && s4 == HIGH && s5 == HIGH) //***** - Situation #16
-  { 
+  {
     stop();
   }
 }
