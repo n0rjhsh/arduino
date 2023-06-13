@@ -1,8 +1,10 @@
+//motor shield pin
 int _ = _;
 int _ = _;
 int _ = _;
 int _ = _;
 
+//ultrasonic pin
 int _ = _;
 int _ = _;
 long _;
@@ -14,8 +16,8 @@ void setup()
   pinMode(_, OUTPUT);
   pinMode(_, OUTPUT);
   pinMode(_, OUTPUT);
-  pinMode(_, OUTPUT); //ultrasonic trig pin
-  pinMode(_, INPUT); //ultrasonic echo pin
+  pinMode(_, INPUT); //echo
+  pinMode(_, OUTPUT); //trig
   Serial.begin(9600);
 }
 
@@ -57,7 +59,7 @@ void stop()
   analogWrite(_, 0);
 }
 
-void loop()
+void _() //ultrasonic
 {
   digitalWrite(_, LOW); //ultrasonic trig pin
   delayMicroseconds(2);
@@ -70,7 +72,11 @@ void loop()
   //ultrasonic echo pin
   _ = pulseIn(_, HIGH);
   _ = _ * 0.034 / 2;
+}
 
+void loop()
+{
+  _(); //ultrasonic
   Serial.print("Distance: ");
   Serial.println(_);
 
