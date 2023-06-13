@@ -50,7 +50,8 @@ void _(int a, int b) //a=right motor, b=left motor
   analogWrite(_, b);
 }
 
-void stop() {
+void stop() 
+{
   _(_, _);
   analogWrite(_, 0);
 }
