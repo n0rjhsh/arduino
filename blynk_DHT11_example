@@ -1,0 +1,35 @@
+#define BLYNK_PRINT Serial
+#define BLYNK_TEMPLATE_ID "TMPL6O6th5tNZ" //refer Blynk.Console device info
+#define BLYNK_DEVICE_NAME "Test200623" //refer Blynk.Console device info
+#define BLYNK_AUTH_TOKEN "gE59iXIz9rlwfdI5Ln9vPivW9VSyqLHB" //refer Blynk.Console device info
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+#include <SimpleDHT.h>
+
+#define dhtpin 13
+SimpleDHT11 dht11(dhtpin); //To declare type of DHT
+byte temperature = 0;
+byte humidity = 0;
+
+char auth[] = BLYNK_AUTH_TOKEN;
+char ssid[] = "norhanizajhsh"; //use own hotspot ssid name
+char pass[] = "sanzo143"; //use own hotspot password
+
+void setup()
+{
+  Serial.begin(9600);
+  Blynk.begin(auth, ssid, pass);
+  pinMode(dhtpin, INPUT);
+}
+
+void loop()
+{
+  Blynk.run();
+  dht11.read(&temperature, &humidity, NULL);
+  int T = temperature;
+  int H = humidity;
+  Blynk.virtualWrite(V1, T);
+  Blynk.virtualWrite(V2, H);
+  delay(100);
+}
