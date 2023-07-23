@@ -7,7 +7,7 @@
 #include <BlynkSimpleEsp8266.h>
 #include <SimpleDHT.h>
 
-#define dhtpin 13
+#define dhtpin 14
 SimpleDHT11 dht11(dhtpin); //To declare type of DHT
 byte temperature = 0;
 byte humidity = 0;
