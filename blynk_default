@@ -7,8 +7,8 @@
 #include <BlynkSimpleEsp8266.h>
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "norhanizajhsh"; //use own hotspot ssid name
-char pass[] = "sanzo143"; //use own hotspot password
+char ssid[] = "xxxxxxxxxx"; //use own hotspot ssid name
+char pass[] = "xxxxxxxxxx"; //use own hotspot password
 
 void setup()
 {
