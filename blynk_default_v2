@@ -1,0 +1,22 @@
+#define BLYNK_PRINT Serial
+#define BLYNK_TEMPLATE_ID "TMPL6O6th5tNZ" //refer Blynk.Console device info
+#define BLYNK_DEVICE_NAME "Test200623" //refer Blynk.Console device info
+#define BLYNK_AUTH_TOKEN "gE59iXIz9rlwfdI5Ln9vPivW9VSyqLHB" //refer Blynk.Console device info
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+char auth[] = BLYNK_AUTH_TOKEN;
+char ssid[] = "xxxxxxxxxxx"; //use own hotspot ssid name
+char pass[] = "xxxxxxxxxxx"; //use own hotspot password
+
+void setup()
+{
+  Serial.begin(9600);
+  Blynk.begin(auth, ssid, pass);
+}
+
+void loop()
+{
+  Blynk.run();
+}
